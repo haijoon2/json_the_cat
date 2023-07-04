@@ -20,8 +20,8 @@ request(`https://api.thecatapi.com/v1/breeds/search?q=${arg}`, (error, response,
   }
 });
 
-function printResult(body) {
+const printResult = (body) => {
   const fetchedData = JSON.parse(body);
   console.log(typeof fetchedData);
   console.log(fetchedData[0].description);
-}
+};
